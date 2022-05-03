@@ -25,9 +25,69 @@ cmp text1.txt text2.txt
 Пример
 
 A.txt:
-Alex
 Michael
-Robert
 Paul
+Robert
+
 
 B.txt:
+George
+Kolin
+Michael
+Robin
+
+comm A.txt B.txt
+
+Выведет такое (без _)
+__________George  
+
+__________Kolin  
+
+Paul  
+
+_________________Michael  
+
+Robert  
+
+__________Robin  
+
+Аргументы -1, -2, -3 убирают из вывода соответствующие столбцы, например -12 выведет только общие строки
+
+## wc
+
+Выводит различную информацию о текстовом файле
+-l выведет количество строк
+-w выведет количество слов
+-c выведет размер файла в байтах
+-m выведет количество символов
+Пример
+file:
+323
+6
+22
+545
+1
+wc file -l
+
+Выведет 5 file
+
+## dd
+
+Побайтово копирует файлы
+Параметр if=путь указывает входной файл, of=путь - выходной
+Пример
+dd if=/dev/sda of=/dev/sdb - резервное копирование диска
+
+## diff
+
+
+## grep
+Команда с множеством функций
+Поиск строки со словом в файле
+Пример
+A.txt:
+Insurance cost reduced
+Nowadays there is a lot of internet devices
+Life is beautiful
+grep 'life' A.txt
+Выведет 3
